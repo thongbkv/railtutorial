@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :users
   #root 'application#hello'
   root 'static_pages#home'
+  config.force_ssl = true
 end
