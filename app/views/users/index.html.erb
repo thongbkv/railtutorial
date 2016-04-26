@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>Listing Users</h1>
 
@@ -27,3 +27,22 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+ -->
+
+ <%= provide(:title, 'All users') %>
+ <h1>All users</h1>
+
+ <%= will_paginate %>
+
+ <ul class="users">
+    <% @users.each do |user| %>
+      <li>
+        <!-- <%= gravatar_for user%> 
+        <%= link_to user.name, user %> -->
+        <!-- <%= render user %> -->
+        <%= render @users %>
+      </li>
+    <% end %>
+ </ul>
+
+ <%= will_paginate %>
