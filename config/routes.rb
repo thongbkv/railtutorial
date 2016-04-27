@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :microposts
   resources :users
   resources :account_activations, only: [:edit]
+  resources :microposts,          only: [:create, :destroy]
   #root 'application#hello'
   root 'static_pages#home'
   #config.force_ssl = true
